@@ -167,7 +167,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script_stop: true
           script: |
-            exec zsh
+            exec bash
             set -e
             source $HOME/.bashrc
             basedir=$HOME/shiro
