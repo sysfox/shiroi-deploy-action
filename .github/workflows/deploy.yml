@@ -1,6 +1,7 @@
 name: Build and Deploy
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -168,6 +169,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script_stop: true
           script: |
+            exec bash
             set -e
             source $HOME/.bashrc
             basedir=$HOME/shiro
